@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "basket-hoop",
+    "title": "Basket Hoop",
+    "description": "Shoot hoops and score big in this addictive basketball game.",
+    "category": "Arcade",
+    "iframeUrl": "https://d11jzht7mj96rr.cloudfront.net/games/2024/construct/311/basket-hoop/index-gg.html",
+    "thumbnail": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop"
+  }
+]
