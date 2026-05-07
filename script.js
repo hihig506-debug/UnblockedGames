@@ -1,5 +1,5 @@
 /**
- * Unblocked Arcade - Vanilla JavaScript Implementation
+ * Jpeg Game's - Vanilla JavaScript Implementation
  */
 
 const state = {
