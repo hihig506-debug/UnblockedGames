@@ -1,0 +1,74 @@
+[
+  {
+    "id": "2048",
+    "title": "2048",
+    "description": "The classic math puzzler. Join the numbers to get to the 2048 tile!",
+    "category": "Puzzle",
+    "iframeUrl": "https://play2048.co/",
+    "thumbnail": "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "snake",
+    "title": "Classic Snake",
+    "description": "The timeless arcade game. Eat the apples and grow as long as you can.",
+    "category": "Arcade",
+    "iframeUrl": "https://iamvinit.github.io/SnakeGame/",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "cookie-clicker",
+    "title": "Cookie Clicker",
+    "description": "Baked until perfectly golden. Click for cookies and build your empire.",
+    "category": "Idle",
+    "iframeUrl": "https://orteil.dashnet.org/cookieclicker/",
+    "thumbnail": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "dino",
+    "title": "Chrome Dino Run",
+    "description": "Jump over cacti and dodge pterodactyls in this endless runner.",
+    "category": "Runner",
+    "iframeUrl": "https://offline-dino-game.firebaseapp.com/",
+    "thumbnail": "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "pacman",
+    "title": "Pac-Man",
+    "description": "The definitive maze chaser. Waka waka your way to a high score.",
+    "category": "Arcade",
+    "iframeUrl": "https://freepacman.org/",
+    "thumbnail": "https://images.unsplash.com/photo-1551103782-893bd209c13b?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "tetris",
+    "title": "Classic Tetris",
+    "description": "Drop blocks, clear lines, and don't reach the top!",
+    "category": "Puzzle",
+    "iframeUrl": "https://tetris.com/play-tetris",
+    "thumbnail": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "slope",
+    "title": "Slope",
+    "description": "Speed down the neon slope. Don't hit the walls and don't fall off!",
+    "category": "Runner",
+    "iframeUrl": "https://math-games-911.github.io/slope-game/",
+    "thumbnail": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "chess",
+    "title": "Grandmaster Chess",
+    "description": "The ultimate game of strategy. Play against the AI or a friend.",
+    "category": "Puzzle",
+    "iframeUrl": "https://lichess.org/export/embed/lpj9tA06?theme=auto&bg=auto",
+    "thumbnail": "https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "flappy",
+    "title": "Flappy Bird Clone",
+    "description": "Flap your wings and navigate through the pipes in this challenging arcade hit.",
+    "category": "Arcade",
+    "iframeUrl": "https://flappybird.io/",
+    "thumbnail": "https://images.unsplash.com/photo-1551103782-893bd209c13b?w=400&h=300&fit=crop"
+  }
+]
