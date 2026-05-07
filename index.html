@@ -1,13 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Arcade | Premium Web Games</title>
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gaming: {
+                            bg: '#09090b',
+                            card: '#18181b',
+                            accent: '#3b82f6',
+                            neon: '#a855f7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #09090b;
+            color: #f4f4f5;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans selection:bg-purple-500/30 selection:text-white">
 
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-zinc-950/80 backdrop-blur-md border-b border-white/5 py-4 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 group cursor-default">
+            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center neon-glow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
+            </div>
+            <h1 class="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60 uppercase">
+                ARCADE<span class="text-blue-500 font-extrabold">UNBLOCKED</span>
+            </h1>
+        </div>
+
+        <div class="relative w-full max-w-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search games..."
+                class="w-full bg-zinc-900/50 border border-white/10 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all placeholder:text-zinc-600"
+            />
+        </div>
+
+        <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-zinc-400">
+            <button class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-lg transition-all active:scale-95 shadow-lg shadow-blue-600/20">
+                Play Now
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-1 flex flex-col md:flex-row">
+        <!-- Sidebar Categories -->
+        <aside class="w-full md:w-64 border-r border-white/5 p-6 space-y-6 md:block hidden">
+            <div>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-4 px-2">Navigation</h2>
+                <nav id="categoryList" class="space-y-1">
+                    <!-- Categories will be injected here -->
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Mobile Category Scroll -->
+        <div id="mobileCategoryList" class="md:hidden flex overflow-x-auto p-4 gap-2 border-b border-white/5 no-scrollbar">
+            <!-- Mobile categories injected here -->
+        </div>
+
+        <!-- Game Grid -->
+        <section class="flex-1 overflow-y-auto p-6 md:p-8">
+            <div class="mb-8">
+                <h2 id="categoryTitle" class="text-3xl font-black tracking-tight mb-2 uppercase">Discover</h2>
+                <div class="h-1 w-20 bg-blue-600 rounded-full"></div>
+            </div>
+
+            <div id="gameGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Games will be injected here -->
+            </div>
+
+            <div id="noResults" class="hidden flex flex-col items-center justify-center py-20 text-center">
+                <div class="w-16 h-16 bg-zinc-900 rounded-full flex items-center justify-center mb-4 border border-white/5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-zinc-700"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </div>
+                <h3 class="text-lg font-bold text-zinc-300">No matching games</h3>
+                <p class="text-zinc-500 text-sm">Try a different search term</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/95 p-4 md:p-8 backdrop-blur-xl">
+        <div id="modalContent" class="bg-zinc-900 rounded-3xl overflow-hidden flex flex-col shadow-2xl border border-white/10 w-full max-w-5xl h-[80vh] transition-all duration-300">
+            <div class="p-4 flex items-center justify-between border-b border-white/5">
+                <div class="flex items-center gap-4">
+                    <button id="closeModal" class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors border border-white/5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                    <div>
+                        <h2 id="modalTitle" class="font-bold text-lg leading-tight uppercase tracking-tight">Game Title</h2>
+                        <div class="flex items-center gap-2">
+                           <span class="text-[10px] font-bold text-blue-500 uppercase tracking-widest animate-pulse">Running</span>
+                           <span class="w-1 h-1 rounded-full bg-zinc-700"></span>
+                           <span id="modalCategory" class="text-[10px] text-zinc-500 uppercase tracking-widest">Category</span>
+                        </div>
+                    </div>
+                </div>
+                <button id="toggleFullscreen" class="flex items-center gap-2 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest transition-all border border-white/10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+                    <span class="hidden sm:inline" id="fsText">Cinema Mode</span>
+                </button>
+            </div>
+
+            <div class="flex-1 bg-black overflow-hidden relative">
+                <iframe id="gameIframe" class="w-full h-full border-none" allowfullscreen referrerPolicy="no-referrer"></iframe>
+            </div>
+
+            <div id="modalInfo" class="p-6 bg-zinc-900/50 flex flex-col md:flex-row gap-6 border-t border-white/5">
+                <div class="flex-1">
+                    <h3 class="text-xs font-bold uppercase tracking-widest text-zinc-500 mb-2">Description</h3>
+                    <p id="modalDescription" class="text-zinc-400 text-sm leading-relaxed"></p>
+                </div>
+                <div class="md:w-64 space-y-4">
+                    <button class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold uppercase tracking-widest py-3 rounded-xl transition-all shadow-lg shadow-blue-600/20">
+                        Favorite Game
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-8 px-12 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-[10px] font-bold tracking-widest text-zinc-600 mt-auto uppercase">
+        <div class="flex items-center gap-8">
+           <p>&copy; 2026 UNBLOCKED ARCADE</p>
+           <p class="hidden sm:block">Pure Performance</p>
+        </div>
+        <div class="flex items-center gap-8">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Contact Us</a>
+          <a href="#" class="text-white">Request a Game</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
