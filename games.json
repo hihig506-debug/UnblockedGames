@@ -6,5 +6,13 @@
     "category": "Arcade",
     "iframeUrl": "https://d11jzht7mj96rr.cloudfront.net/games/2024/construct/311/basket-hoop/index-gg.html",
     "thumbnail": "https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=400&h=300&fit=crop"
+  },
+  {
+    "id": "eaglercraft",
+    "title": "Mincraft",
+    "description": "The full block-building survival experience right in your browser. Explore, mine, and build your world.",
+    "category": "Arcade",
+    "iframeUrl": "https://eaglercraft1-8.github.io/",
+    "thumbnail": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=300&fit=crop"
   }
 ]
